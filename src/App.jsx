@@ -1,49 +1,91 @@
-//This is from the Lists and keys coding practise 3 Q1
-import Heading from "./Components/index";
+//This is from the coding practise 3 Q2
 import "./App.css";
 
-const bannerCardsList = [
+const cardsList = [
   {
     id: 1,
-    headerText: "The Seasons Latest",
-    description: "Get the seasons all latest designs in a flick of your hand",
+    title: "Data Scientist",
+    description:
+      "Data scientists gather and analyze large sets of structured and unstructured data",
+    imgUrl: "https://assets.ccbp.in/frontend/react-js/data-scientist-img.png",
     className: "card-1",
   },
   {
     id: 2,
-    headerText: "Our New Designs",
+    title: "IOT Developer",
     description:
-      "Get the designs developed by our in-house team all for yourself",
+      "IoT Developers are professionals who can develop, manage, and monitor IoT devices.",
+    imgUrl: "https://assets.ccbp.in/frontend/react-js/iot-developer-img.png",
     className: "card-2",
   },
   {
     id: 3,
-    headerText: "Insiders",
-    description: "Get the top class products for yourself with an extra off",
+    title: "VR Developer",
+    description:
+      "A VR developer creates completely new digital environments that people can see.",
+    imgUrl: "https://assets.ccbp.in/frontend/react-js/vr-developer-img.png",
     className: "card-3",
+  },
+  {
+    id: 4,
+    title: "ML Engineer",
+    description:
+      "Machine learning engineers feed data into models defined by data scientists.",
+    imgUrl: "https://assets.ccbp.in/frontend/react-js/ml-engineer-img.png",
+    className: "card-4",
   },
 ];
 
-const App = () => (
-  <>
-    {/* {bannerCardsList.map((eachItem) => (
-      <h1>{eachItem.headerText}</h1>
-    ))}
-    {bannerCardsList.map((item) => (
-      <Heading text="hello world" />
-    ))} 
-     ANythiing */}
-
-    <h1> You are doing Good</h1>
-    <ol>
-      {bannerCardsList.map((eachItem) => (
-        <Heading BannerDetails={eachItem} />
-      ))}
-    </ol>
-  </>
-);
+const App = () => <h1>Replace this element with your code</h1>;
 
 export default App;
+
+//This is from the Lists and keys coding practise 3 Q1
+// import Heading from "./Components/index";
+// import "./App.css";
+
+// const bannerCardsList = [
+//   {
+//     id: 1,
+//     headerText: "The Seasons Latest",
+//     description: "Get the seasons all latest designs in a flick of your hand",
+//     className: "card-1",
+//   },
+//   {
+//     id: 2,
+//     headerText: "Our New Designs",
+//     description:
+//       "Get the designs developed by our in-house team all for yourself",
+//     className: "card-2",
+//   },
+//   {
+//     id: 3,
+//     headerText: "Insiders",
+//     description: "Get the top class products for yourself with an extra off",
+//     className: "card-3",
+//   },
+// ];
+
+// const App = () => (
+//   <>
+//     {/* {bannerCardsList.map((eachItem) => (
+//       <h1>{eachItem.headerText}</h1>
+//     ))}
+//     {bannerCardsList.map((item) => (
+//       <Heading text="hello world" />
+//     ))}
+//      ANythiing */}
+
+//     <h1> You are doing Good</h1>
+//     <ol>
+//       {bannerCardsList.map((eachItem) => (
+//         <Heading BannerDetails={eachItem} />
+//       ))}
+//     </ol>
+//   </>
+// );
+
+// export default App;
 
 //not working syntax
 
