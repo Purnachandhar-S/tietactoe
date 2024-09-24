@@ -36,14 +36,25 @@ const cardsList = [
   },
 ];
 
-const App = () => <h1>Replace this element with your code</h1>;
+const App = () => (
+  <div>
+    <h1>Learn 4.0 Technologies</h1>
+    <p>get trained by alumini</p>
+    {cardsList.map((cv) => (
+      <div style={{ width: "15%", height: "15%", display: "flex" }}>
+        <h1>{cv.title}</h1>
+        <p style={{ color: "blue", textAlign: "center" }}>{cv.description}</p>
+        <img src={cv.imgUrl} alt="DP" />
+      </div>
+    ))}
+  </div>
+);
 
 export default App;
 
 //This is from the Lists and keys coding practise 3 Q1
 // import Heading from "./Components/index";
 // import "./App.css";
-
 // const bannerCardsList = [
 //   {
 //     id: 1,
