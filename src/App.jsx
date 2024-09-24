@@ -41,9 +41,9 @@ const App = () => (
     <h1>Learn 4.0 Technologies</h1>
     <p>get trained by alumini</p>
     {cardsList.map((cv) => (
-      <div style={{ width: "15%", height: "15%", display: "flex" }}>
+      <div style={{ color: "red" }}>
         <h1>{cv.title}</h1>
-        <p style={{ color: "blue", textAlign: "center" }}>{cv.description}</p>
+        <p>{cv.description}</p>
         <img src={cv.imgUrl} alt="DP" />
       </div>
     ))}
