@@ -1,5 +1,7 @@
 //This is from the coding practise 3 Q2
 import "./App.css";
+// import RandomNumber from "./Components/randomnumber";
+import EvenOddApp from "./Components/EvenOddApp";
 
 const cardsList = [
   {
@@ -38,10 +40,14 @@ const cardsList = [
 
 const App = () => (
   <div>
+    Hi this is even odd app
+    <EvenOddApp />
+    <hr width="100%" color="green" />
+    {/* <RandomNumber /> */}
     <h1>Learn 4.0 Technologies</h1>
     <p>get trained by alumini</p>
     {cardsList.map((cv) => (
-      <div style={{ color: "red" }}>
+      <div style={{ color: "" }}>
         <h1>{cv.title}</h1>
         <p>{cv.description}</p>
         <img src={cv.imgUrl} alt="DP" />

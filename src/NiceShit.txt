@@ -1,0 +1,97 @@
+import React, { useState } from 'react';
+
+function EvenOddApp() {
+  const [number, setNumber] = useState(0);
+  const [isEven, setIsEven] = useState('Even');
+
+  // Function to generate a random number and check if it's even or odd
+  const generateNumber = () => {
+    const randomNum = Math.floor(Math.random() * 100); // Random number between 0 and 99
+    setNumber(randomNum);
+    setIsEven(randomNum % 2 === 0 ? 'Even' : 'Odd');
+  };
+
+  // Initial number generation
+  React.useEffect(() => {
+    generateNumber();
+  }, []);
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Generated Number: {number}</h1>
+      <p>The number is: {isEven}</p>
+      <button onClick={generateNumber} style={{ padding: '10px 20px', fontSize: '16px' }}>
+        Generate New Number
+      </button>
+    </div>
+  );
+}
+
+export default EvenOddApp;
+
+
+
+
+// Write your code here
+import { useState } from "react";
+function EvenOddApp() {
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState("Even");
+  function checkFunction(randomNumber) {
+    return randomNumber % 2 === 0 ? "Even" : "Odd";
+  }
+  function myFunction() {
+    const randomNumber = setNum1(Math.floor(Math.random() * 100));
+    console.log(randomNumber);
+    setNum1(randomNumber);
+    setNum2(checkFunction(randomNumber));
+
+    return num1, num2;
+  }
+  // const [randomforest, setstate] = useState(getRandomFloat(1, 100));
+
+  return (
+    <>
+      <h1>Count {num1}</h1>
+      <p> Count is {num2}</p>
+      <button onClick={myFunction}>Increment</button>
+      {console.log(num1, num2)}
+      {/* onClick={() => {
+        setstate(getRandomFloat(1, 100));
+      }} */}
+    </>
+  );
+}
+
+export default EvenOddApp;
+
+
+
+
+import React, { useState } from "react";
+
+function EvenOddApp() {
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState("Even");
+
+  function checkFunction(number) {
+    return number % 2 === 0 ? "Even" : "Odd";
+  }
+
+  function myFunction() {
+    const randomNum = Math.floor(Math.random() * 100);
+    setNum1(randomNum);
+    setNum2(checkFunction(randomNum));
+  }
+
+  return (
+    <>
+      <h1>Count: {num1}</h1>
+      <p>Count is {num2}</p>
+      <button onClick={myFunction}>Generate Random Number</button>
+      <p>Increase By Random Number Between 0 to 100</p>
+    </>
+  );
+}
+
+export default EvenOddApp;
