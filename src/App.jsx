@@ -3,8 +3,8 @@
 
 import React from "react";
 //import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
-// import Randomnumber from "./Components/randomnumber";
-import LoginApp from "./Components/LoginApp";
+import Randomnumber from "./Components/randomnumber";
+// import LoginApp from "./Components/LoginApp";
 //import EvenOddApp from "./Components/EvenOddApp";
 // import ShowHideName from "./Components/ShowAndHide/showHideName";
 
@@ -12,8 +12,8 @@ const App = () => {
   return (
     <div>
       {/* <DestinationSearch /> */}
-      {/* <Randomnumber /> */}
-      <LoginApp />
+      <Randomnumber />
+      {/* <LoginApp /> */}
       {/* <ShowHideName /> */}
       {/* <EvenOddApp /> */}
     </div>

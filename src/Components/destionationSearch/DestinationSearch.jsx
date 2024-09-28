@@ -75,25 +75,33 @@ class DestinationSearch extends Component {
 
   render() {
     const { searchInput, usersDetailsList } = this.state;
+    // chatgpt - Convert both search input and user names to lowercase for case-insensitive search
     const searchResults = usersDetailsList.filter((eachUser) =>
-      eachUser.name.includes(searchInput)
+      eachUser.name.toLowerCase().includes(searchInput.trim().toLowerCase())
     );
+    console.log(searchInput);
     return (
       <div className="app-container">
+        <h1>Purnachandhar</h1>
         <h1 className="title">Users List</h1>
         <input
           type="search"
           onChange={this.onChangeSearchInput}
           value={searchInput}
         />
+
         <ul className="list-container">
-          {searchResults.map((eachUser) => (
-            <UserProfile
-              userDetails={eachUser}
-              key={eachUser.uniqueNo}
-              deleteUser={this.deleteUser}
-            />
-          ))}
+          {searchResults.length > 0 ? (
+            searchResults.map((eachUser) => (
+              <UserProfile
+                userDetails={eachUser}
+                key={eachUser.uniqueNo}
+                deleteUser={this.deleteUser}
+              />
+            ))
+          ) : (
+            <p>No users found</p>
+          )}
         </ul>
       </div>
     );

@@ -1,4 +1,31 @@
 import React, { useState } from "react";
+// import { Component } from "react";
+// class RandomNumber extends Component {
+//   state = {
+//     count: 0,
+//   };
+
+//   // Add a blank line between class methods for better readability
+//   generateNumber = () => {
+//     const randomNumber = Math.floor(Math.random() * 100); // Use 'const' instead of 'let'
+//     this.setState({
+//       count: randomNumber,
+//     });
+//   };
+
+//   render() {
+//     const { count } = this.state;
+//     return (
+//       <div style={{ textAlign: "center" }}>
+//         <h1>Random Number </h1>
+//         <p>Generate a random number in the range of 0 to 100</p>
+//         <button onClick={this.generateNumber}>Generate</button>
+//         <h1>{count}</h1>
+//       </div>
+//     );
+//   }
+// }
+// export default RandomNumber;
 
 const Randomnumber = () => {
   const [count, setCount] = useState(0);
