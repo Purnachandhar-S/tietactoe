@@ -1,18 +1,19 @@
+// coding is simple you have just learn slowly and steadly
 //this is the coding practise 5
 
 import React from "react";
-import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
+//import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
 // import Randomnumber from "./Components/randomnumber";
-// import LoginApp from "./Components/LoginApp";
+import LoginApp from "./Components/LoginApp";
 //import EvenOddApp from "./Components/EvenOddApp";
 // import ShowHideName from "./Components/ShowAndHide/showHideName";
 
 const App = () => {
   return (
     <div>
-      <DestinationSearch />
+      {/* <DestinationSearch /> */}
       {/* <Randomnumber /> */}
-      {/* <LoginApp /> */}
+      <LoginApp />
       {/* <ShowHideName /> */}
       {/* <EvenOddApp /> */}
     </div>
