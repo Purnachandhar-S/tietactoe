@@ -1,3 +1,8 @@
+    git add .
+    git commit -m "made somechanges"
+    git branch -M main
+    git push -u origin main
+
 In this project, let's build **Technology Cards** by applying the concepts we have learned till now.
 
 ### Refer to the image below:
