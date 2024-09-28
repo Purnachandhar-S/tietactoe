@@ -1,14 +1,17 @@
 //this is the coding practise 5
 
 import React from "react";
-import LoginApp from "./Components/LoginApp";
+import Randomnumber from "./Components/randomnumber";
+
+// import LoginApp from "./Components/LoginApp";
 //import EvenOddApp from "./Components/EvenOddApp";
 // import ShowHideName from "./Components/ShowAndHide/showHideName";
 
 const App = () => {
   return (
     <div>
-      <LoginApp />
+      <Randomnumber />
+      {/* <LoginApp /> */}
       {/* <ShowHideName /> */}
       {/* <EvenOddApp /> */}
     </div>

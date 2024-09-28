@@ -1,3 +1,23 @@
+import React, { useState } from "react";
+
+const Randomnumber = () => {
+  const [count, setCount] = useState(0);
+
+  function generateNumber() {
+    let randomNumber = Math.floor(Math.random() * 100);
+    setCount(randomNumber);
+  }
+
+  return (
+    <div>
+      <h1> {count}</h1>
+      <button onClick={generateNumber}>Generate Random number</button>
+    </div>
+  );
+};
+
+export default Randomnumber;
+
 // import React from "react";
 // import { useState } from "react";
 

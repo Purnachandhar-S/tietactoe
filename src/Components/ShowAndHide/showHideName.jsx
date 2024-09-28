@@ -3,29 +3,51 @@ import React from "react";
 // I have to make the name dissaper and reapper when button is clicked
 // button onclcik funcion
 
+// practised twice second day
 class ShowHideName extends React.Component {
   state = {
     showFirstName: false,
-    showLastName: false,
-  };
-  onChangeFirstname = () => {
-    this.setState((prevState) => ({ showFirstName: !prevState.showFirstName }));
   };
 
+  onChangeShowHide = () => {
+    console.log("object");
+    this.setState((prevState) => ({ showFirstName: !prevState.showFirstName }));
+  };
   render() {
-    const { showFirstName, showLastName } = this.state;
+    const { showFirstName } = this.state;
     return (
       <div style={{ textAlign: "center", margin: "100px" }}>
-        <button onClick={this.onChangeFirstname}>Show/Hide firstName</button>
         {showFirstName && <h1>Purnachandhar</h1>}
-        {showLastName && <h1>Simharaju</h1>}
-        <div></div>
+        <button onClick={this.onChangeShowHide}>Show/Hide firstName</button>
       </div>
     );
   }
 }
-
 export default ShowHideName;
+
+// class ShowHideName extends React.Component {
+//   state = {
+//     showFirstName: false,
+//     showLastName: false,
+//   };
+//   onChangeFirstname = () => {
+//     this.setState((prevState) => ({ showFirstName: !prevState.showFirstName }));
+//   };
+
+//   render() {
+//     const { showFirstName, showLastName } = this.state;
+//     return (
+//       <div style={{ textAlign: "center", margin: "100px" }}>
+//         <button onClick={this.onChangeFirstname}>Show/Hide firstName</button>
+//         {showFirstName && <h1>Purnachandhar</h1>}
+//         {showLastName && <h1>Simharaju</h1>}
+//         <div></div>
+//       </div>
+//     );
+//   }
+// }
+
+// export default ShowHideName;
 
 //solution
 
