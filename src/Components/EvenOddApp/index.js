@@ -6,16 +6,6 @@ function EvenOddApp() {
   function checkFunction(randomNumber) {
     return randomNumber % 2 === 0 ? "Even" : "Odd";
   }
-  //the code before the discussion
-  // used the randomNumber setNum1 two times that made the error
-  // function myFunction() {
-  //   const randomNumber = setNum1(Math.floor(Math.random() * 100));
-  //   console.log(randomNumber);
-  //   setNum1(randomNumber);
-  //   setNum2(checkFunction(randomNumber));
-
-  //   return num1, num2;
-  // }
   function myFunction() {
     const randomNumber = Math.floor(Math.random() * 100);
     console.log(randomNumber);

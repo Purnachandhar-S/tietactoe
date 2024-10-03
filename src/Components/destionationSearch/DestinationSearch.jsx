@@ -115,3 +115,97 @@ export default DestinationSearch;
 // search input will change over the time
 // so lets keep Searchinput as state
 // delete user
+
+//paste
+//n+2 code
+
+// import {Component} from 'react'
+
+// import DestinationItem from '../DestinationItem' // Assuming this is correctly set up
+
+// class DestinationSearch extends Component {
+//   state = {
+//     searchInput: '', // searchInput is declared here in the state
+//   }
+
+//   // Updates the search input state when the user types
+//   onChangeSearchInput = event => {
+//     this.setState({
+//       searchInput: event.target.value, // Correctly updating searchInput in the state
+//     })
+//   }
+
+//   render() {
+//     const {destinationsList} = this.props // Access the list from props
+//     const {searchInput} = this.state // Correctly accessing searchInput from state
+
+//     // Filter the destinations based on the search input
+//     const filteredDestinations = destinationsList.filter(
+//       destination =>
+//         destination.name.toLowerCase().includes(searchInput.toLowerCase()), // Using searchInput here
+//     )
+
+//     return (
+//       <div style={{textAlign: 'center'}}>
+//         <h1>Destination Search</h1>
+//         {/* Input to filter destinations */}
+//         <input
+//           type="search"
+//           onChange={this.onChangeSearchInput}
+//           value={searchInput} // Correctly binding searchInput here
+//           placeholder="Search Destination"
+//         />
+//         <ul style={{listStyleType: 'none'}}>
+//           {/* Iterate over filtered destinations and render each */}
+//           {filteredDestinations.map(destination => (
+//             <DestinationItem key={destination.id} destination={destination} />
+//           ))}
+//         </ul>
+//       </div>
+//     )
+//   }
+// }
+
+// export default DestinationSearch
+
+//n time code
+
+// import {Component} from 'react'
+// import DestinationItem from '../DestinationItem/index'
+
+// class DestinationSearch extends Component {
+//   state = {
+//     searchInput: '',
+//   }
+
+//   onChangeSearchInput = event => {
+//     this.setState({
+//       searchInput: event.target.value,
+//     })
+//   }
+
+//   render() {
+//     const {destinationsList} = this.props // Access the list from props
+//     const {searchInput} = this.state
+//     return (
+//       <div style={{textAlign: 'center'}}>
+//         <h1>Destination Search</h1>
+//         <input
+//           type="search"
+//           onChange={this.onChangeSearchInput}
+//           value={searchInput}
+//         />
+//         <ul style={{listStyleType: 'none'}}>
+//           {/* Iterate over destinationsList and render each destination */}
+//           {destinationsList.map(destination => (
+//             <DestinationItem destination={destination} />
+//           ))}
+//         </ul>
+//       </div>
+//     )
+//   }
+// }
+
+// export default DestinationSearch
+
+// //            {/* <li key={destination.id}>{destination.name}</li> // Use `destination.id` as key instead of index */}

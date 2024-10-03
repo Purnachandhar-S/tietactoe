@@ -2,8 +2,10 @@
 //this is the coding practise 5
 
 import React from "react";
+import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
+//import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
 //import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
-import Randomnumber from "./Components/randomnumber";
+//import Randomnumber from "./Components/randomnumber";
 // import LoginApp from "./Components/LoginApp";
 //import EvenOddApp from "./Components/EvenOddApp";
 // import ShowHideName from "./Components/ShowAndHide/showHideName";
@@ -11,8 +13,10 @@ import Randomnumber from "./Components/randomnumber";
 const App = () => {
   return (
     <div>
+      <CashWithdrawal />
+      {/* <SimpleTodos /> */}
       {/* <DestinationSearch /> */}
-      <Randomnumber />
+      {/* <Randomnumber /> */}
       {/* <LoginApp /> */}
       {/* <ShowHideName /> */}
       {/* <EvenOddApp /> */}
