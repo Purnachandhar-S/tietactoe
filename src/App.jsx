@@ -1,48 +1,52 @@
-import GoogleSuggestions from "./Components/googleSearch/GoogleSuggestions";
+// coding is simple you just learn slowly and steadly
+// this is the coding practise 5
 
-import "./App.css";
+import React from "react";
+//import "./App.css";
+import App1 from "./Components/Assignment/App1";
+// import CountLetters from "./Components/countLetters/CountLetters";
+// import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
+// import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
+// import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
+//import Randomnumber from "./Components/randomnumber";
+// import LoginApp from "./Components/LoginApp";
+// import EvenOddApp from "./Components/EvenOddApp";
+// import ShowHideName from "./Components/ShowAndHide/showHideName";
 
-const suggestionsList = [
-  { id: 1, suggestion: "Price of Ethereum" },
-  { id: 2, suggestion: "Oculus Quest 2 specs" },
-  { id: 3, suggestion: "Tesla Share Price" },
-  { id: 4, suggestion: "Price of Ethereum today" },
-  { id: 5, suggestion: "Latest trends in AI" },
-  { id: 6, suggestion: "Latest trends in ML" },
-];
-
-const App = () => <GoogleSuggestions suggestionsList={suggestionsList} />;
+const App = () => {
+  return (
+    <div className="container">
+      <App1 />
+      {/* <CountLetters /> */}
+      {/* <CashWithdrawal /> */}
+      {/* <SimpleTodos /> */}
+      {/* <DestinationSearch /> */}
+      {/* <Randomnumber /> */}
+      {/* <LoginApp /> */}
+      {/* <ShowHideName /> */}
+      {/* <EvenOddApp /> */}
+    </div>
+  );
+};
 
 export default App;
 
-// coding is simple you have just learn slowly and steadly
-//this is the coding practise 5
+// import GoogleSuggestions from "./Components/googleSearch/GoogleSuggestions";
 
-// import React from "react";
-// import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
-// //import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
-// //import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
-// //import Randomnumber from "./Components/randomnumber";
-// // import LoginApp from "./Components/LoginApp";
-// //import EvenOddApp from "./Components/EvenOddApp";
-// // import ShowHideName from "./Components/ShowAndHide/showHideName";
+// import "./App.css";
 
-// const App = () => {
-//   return (
-//     <div>
-//       <CashWithdrawal />
-//       {/* <SimpleTodos /> */}
-//       {/* <DestinationSearch /> */}
-//       {/* <Randomnumber /> */}
-//       {/* <LoginApp /> */}
-//       {/* <ShowHideName /> */}
-//       {/* <EvenOddApp /> */}
-//     </div>
-//   );
-// };
+// const suggestionsList = [
+//   { id: 1, suggestion: "Price of Ethereum" },
+//   { id: 2, suggestion: "Oculus Quest 2 specs" },
+//   { id: 3, suggestion: "Tesla Share Price" },
+//   { id: 4, suggestion: "Price of Ethereum today" },
+//   { id: 5, suggestion: "Latest trends in AI" },
+//   { id: 6, suggestion: "Latest trends in ML" },
+// ];
+
+// const App = () => <GoogleSuggestions suggestionsList={suggestionsList} />;
 
 // export default App;
-
 //This is from the coding practise 3 Q2
 // import "./App.css";
 // // import RandomNumber from "./Components/randomnumber";

@@ -108,7 +108,7 @@ export default GoogleSuggestions;
 // import React, { useState } from "react";
 
 // function GoogleSuggestions(props) {
-//   const { suggestionsList } = props;
+//    const { suggestionsList } = props;
 //   const [searchInput, setSearchInput] = useState("");
 
 //   function onChangeSearchInput(event) {
