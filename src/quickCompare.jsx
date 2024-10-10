@@ -59,3 +59,41 @@ const SimpleTodos = () => {
 };
 
 export default SimpleTodos;
+
+// import React, { Component } from "react";
+
+// class Counter extends Component {
+//   constructor(props) {
+//     super(props);
+//     // Initialize the state
+//     this.state = {
+//       count: 0,
+//     };
+//   }
+
+//   // Method to increase count
+//   increase = () => {
+//     this.setState((prevState) => ({
+//       count: prevState.count + 1,
+//     }));
+//   };
+
+//   // Method to decrease count
+//   decrease = () => {
+//     this.setState((prevState) => ({
+//       count: prevState.count > 0 ? prevState.count - 1 : 0, // Optional check to prevent negative values
+//     }));
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <h1>Counter: {this.state.count}</h1>
+//         <button onClick={this.increase}>Increase</button>
+//         <button onClick={this.decrease}>Decrease</button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default Counter;

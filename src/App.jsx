@@ -3,10 +3,11 @@
 
 import React from "react";
 //import "./App.css";
-import App1 from "./Components/Assignment/App1";
+//import App1 from "./Components/Assignment/App1";
+//import Counter from "./Components/Counter";
 // import CountLetters from "./Components/countLetters/CountLetters";
 // import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
-// import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
+import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
 // import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
 //import Randomnumber from "./Components/randomnumber";
 // import LoginApp from "./Components/LoginApp";
@@ -16,10 +17,13 @@ import App1 from "./Components/Assignment/App1";
 const App = () => {
   return (
     <div className="container">
-      <App1 />
+      {/* <Counter /> */}
+      {/* this is counter app using class component IMP revise daily */}
+      {/* <App1 />  */}
+      {/* History list search and delete operation */}
       {/* <CountLetters /> */}
       {/* <CashWithdrawal /> */}
-      {/* <SimpleTodos /> */}
+      <SimpleTodos />
       {/* <DestinationSearch /> */}
       {/* <Randomnumber /> */}
       {/* <LoginApp /> */}
