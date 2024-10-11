@@ -39,23 +39,23 @@ import "./index.css";
 class GoogleSuggestions extends Component {
   state = {
     searchInput: "",
-  };
+  }; // keeping the searchinput as state to update with setState
 
   updateSearchInput = (value) => {
     this.setState({
       searchInput: value,
     });
-  };
+  }; // we get the value when we click arrow it updates Search Input
 
   onChangeSearchInput = (event) => {
     this.setState({
       searchInput: event.target.value,
     });
-  };
+  }; // when we enter the input , searchInput set to entered value
 
   render() {
-    const { searchInput } = this.state;
-    const { suggestionsList } = this.props;
+    const { searchInput } = this.state; // declared the state for the searchInput
+    const { suggestionsList } = this.props; // taking the suggestions list from the app as props
     const searchResults = suggestionsList.filter((eachSuggestion) =>
       eachSuggestion.suggestion
         .toLowerCase()

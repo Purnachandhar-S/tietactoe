@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <h1>haiudhiaush</h1>
-    <img
-      src="https://image.telanganatoday.com/wp-content/uploads/2023/09/DGP-1_V_jpg--816x480-4g.webp?sw=1536&dsz=816x480&iw=659&p=false&r=1.25"
-      alt="dgp"
-    />
-    <img src="./Components/cardItem/logo192.png" alt="logo" />
+    <div class="root"></div>
+    <script type="text/babel">
+      const getnumber = (number) => {
+        return `${number} is ${number > 0 ? "positive" : "negative"}`;
+      };
+      const number = 5;
+      ReactDOM.render(
+        <div>{getnumber(number)}</div>,
+        document.getElementById("root")
+      );
+    </script>
   </body>
 </html>

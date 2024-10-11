@@ -6,8 +6,8 @@ import React from "react";
 //import App1 from "./Components/Assignment/App1";
 //import Counter from "./Components/Counter";
 // import CountLetters from "./Components/countLetters/CountLetters";
-// import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
-import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
+import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
+// import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
 // import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
 //import Randomnumber from "./Components/randomnumber";
 // import LoginApp from "./Components/LoginApp";
@@ -22,8 +22,8 @@ const App = () => {
       {/* <App1 />  */}
       {/* History list search and delete operation */}
       {/* <CountLetters /> */}
-      {/* <CashWithdrawal /> */}
-      <SimpleTodos />
+      <CashWithdrawal />
+      {/* <SimpleTodos /> */}
       {/* <DestinationSearch /> */}
       {/* <Randomnumber /> */}
       {/* <LoginApp /> */}
