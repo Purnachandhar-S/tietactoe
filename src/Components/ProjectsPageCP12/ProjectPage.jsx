@@ -104,7 +104,7 @@ const projectsList = [
 class ProjectPage extends Component {
   state = {
     activeTabId: tabsList[0].tabId,
-  };
+  }; // keeping activeTabId as a state bcz is keep changing everytime we touch
 
   clickTabItem = (tabValue) => {
     this.setState({ activeTabId: tabValue });

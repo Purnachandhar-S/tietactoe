@@ -2,16 +2,22 @@
 // this is the coding practise 5
 
 import React from "react";
-//import "./App.css";
-import ProjectPage from "./Components/ProjectsPageCP12/ProjectPage";
-//import App1 from "./Components/Assignment/App1";
-//import FruitsCounter from "./Components/countLetters/FruitCounter";
-//import Counter from "./Components/Counter";
+import CommentsApp from "./Components/CommentsApp/CommentsApp";
+// import ContactsApp from "./Components/Contacts/ContactsApp";
+// import Reviews from "./Components/CoinTossCp12/Reviews";
+// import CoinToss from "./Components/CoinTossCp12/CoinToss";
+// import AppStore from "./Components/ProjectsPageCP12/AppStore";
+// import "./App.css";
+// import ProjectPage from "./Components/ProjectsPageCP12/ProjectPage";
+// import Gallery from "./Components/GalleryApp_cp12/GalleryApp";
+// import App1 from "./Components/Assignment/App1";
+// import FruitsCounter from "./Components/countLetters/FruitCounter";
+// import Counter from "./Components/Counter";
 // import CountLetters from "./Components/countLetters/CountLetters";
-//import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
+// import CashWithdrawal from "./Components/CashWithDrawal/CashWithdrawal";
 // import SimpleTodos from "./Components/SimpleTodos/SimpleTodos";
 // import DestinationSearch from "./Components/destionationSearch/DestinationSearch";
-//import Randomnumber from "./Components/randomnumber";
+// import Randomnumber from "./Components/randomnumber";
 // import LoginApp from "./Components/LoginApp";
 // import EvenOddApp from "./Components/EvenOddApp";
 // import ShowHideName from "./Components/ShowAndHide/showHideName";
@@ -19,7 +25,13 @@ import ProjectPage from "./Components/ProjectsPageCP12/ProjectPage";
 const App = () => {
   return (
     <div className="container">
-      <ProjectPage />
+      <CommentsApp />
+      {/* <ContactsApp /> */}
+      {/* <Reviews /> */}
+      {/* <CoinToss /> */}
+      {/* <AppStore /> */}
+      {/* <Gallery /> */}
+      {/* <ProjectPage /> */}
       {/* <FruitsCounter /> */}
       {/* <Counter /> */}
       {/* this is counter app using class component IMP revise daily */}
