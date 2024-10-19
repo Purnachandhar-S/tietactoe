@@ -1,8 +1,11 @@
 // coding is simple you just learn slowly and steadly
 // this is the coding practise 5
+// class good 1.projectspage 2. googlesearch 3. contactsapp
 
 import React from "react";
-import CommentsApp from "./Components/CommentsApp/CommentsApp";
+import Appointments from "./Components/AppoinmentsCp16/Appointments";
+
+//import CommentsApp from "./Components/CommentsApp/CommentsApp";
 // import ContactsApp from "./Components/Contacts/ContactsApp";
 // import Reviews from "./Components/CoinTossCp12/Reviews";
 // import CoinToss from "./Components/CoinTossCp12/CoinToss";
@@ -25,7 +28,8 @@ import CommentsApp from "./Components/CommentsApp/CommentsApp";
 const App = () => {
   return (
     <div className="container">
-      <CommentsApp />
+      <Appointments />
+      {/* <CommentsApp /> */}
       {/* <ContactsApp /> */}
       {/* <Reviews /> */}
       {/* <CoinToss /> */}
