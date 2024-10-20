@@ -5,7 +5,7 @@
 import React from "react";
 import Appointments from "./Components/AppoinmentsCp16/Appointments";
 
-//import CommentsApp from "./Components/CommentsApp/CommentsApp";
+// import CommentsApp from "./Components/CommentsApp/CommentsApp";
 // import ContactsApp from "./Components/Contacts/ContactsApp";
 // import Reviews from "./Components/CoinTossCp12/Reviews";
 // import CoinToss from "./Components/CoinTossCp12/CoinToss";
