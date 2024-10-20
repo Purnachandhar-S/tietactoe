@@ -8,13 +8,16 @@ function AppointmentItem(props) {
   const starImgUrl = isFavorite
     ? "https://assets.ccbp.in/frontend/react-js/filled-star-img.png"
     : "https://assets.ccbp.in/frontend/react-js/star-img.png";
+
   const onClickFavoriteIcon = () => {
     toggleIsFavorite(id);
   };
-  const [day, month, year] = date.split("-");
+
+  // Split the date string to construct a Date object
+  const [year, month, day] = date.split("-");
   const parsedDate = new Date(`${year}-${month}-${day}`);
 
-  // Use Intl.DateTimeFormat for specific components (date and weekday separately)
+  // Format the date using Intl.DateTimeFormat
   const dateOptions = { day: "numeric", month: "long", year: "numeric" };
   const weekdayOptions = { weekday: "long" };
 
@@ -26,17 +29,16 @@ function AppointmentItem(props) {
     weekdayOptions
   ).format(parsedDate);
 
-  // Combine date and weekday in the desired order
   const finalFormattedDate = `${formattedDate}, ${formattedWeekday}`;
 
   return (
-    <li>
+    <li key={id} className="appointment-item">
       <div>
         <p>{title}</p>
         <p>{finalFormattedDate}</p>
       </div>
-      <button type="button" onClick={onClickFavoriteIcon}>
-        <img src={starImgUrl} alt="star" />{" "}
+      <button type="button" data-testid="star" onClick={onClickFavoriteIcon}>
+        <img src={starImgUrl} alt="star" />
       </button>
     </li>
   );
@@ -48,26 +50,24 @@ function Appointments() {
   const [date, setDate] = useState("");
   const [stared, setStared] = useState(false);
   const [staredList, setStaredList] = useState([]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(title, date);
+
     const newAppointment = {
       id: uuidv4(),
       title,
       date,
       isFavorite: false,
     };
-    console.log(newAppointment);
+
     if (title !== "" && date !== "") {
-      // setAppList((prevState) => [...prevState, newAppointment]);
-      // setTitle("");
-      // setDate("");
       const newArray = [...appList, newAppointment];
       setAppList(newArray);
       setDate("");
       setTitle("");
     } else {
-      return console.error("enter data");
+      return console.error("Please enter both title and date");
     }
   };
 
@@ -80,47 +80,36 @@ function Appointments() {
     });
     setAppList(newArray);
   };
+
   const getStared = () => {
-    // showing only stared appoinements
-    // we get stared by filtering
     const staredArray = appList.filter((each) => each.isFavorite === true);
-    console.log(staredArray);
-    // we show the list when we click button
-    // toggle the button true false
     setStaredList(staredArray);
     setStared(!stared);
   };
+
   return (
     <div>
-      <div>
-        <h1>Add Appointment</h1>
-        <form onSubmit={onSubmit}>
-          <label>Title</label>
-          <input
-            type="text"
-            onChange={(event) => setTitle(event.target.value)}
-            value={title}
-          />
-          <label htmlFor="Date">Date</label>
-          <input
-            type="Date"
-            onChange={(event) => setDate(event.target.value)}
-            value={date}
-            id="Date"
-          />
-          <button type="submit">Add</button>
-        </form>
-      </div>
-      <div>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png"
-          alt="appointments"
+      <h1>Add Appointment</h1>
+      <form onSubmit={onSubmit}>
+        <label htmlFor="title">Title</label>
+        <input
+          id="title"
+          type="text"
+          onChange={(event) => setTitle(event.target.value)}
+          value={title}
         />
-      </div>
-
+        <label htmlFor="date">Date</label>
+        <input
+          id="date"
+          type="date"
+          onChange={(event) => setDate(event.target.value)}
+          value={date}
+        />
+        <button type="submit">Add</button>
+      </form>
       <hr />
       <h1>Appointments</h1>
-      <button onClick={getStared}>starred</button>
+      <button onClick={getStared}>Starred</button>
       <ul>
         {stared
           ? staredList.map((eachApp) => (
@@ -141,4 +130,5 @@ function Appointments() {
     </div>
   );
 }
+
 export default Appointments;
