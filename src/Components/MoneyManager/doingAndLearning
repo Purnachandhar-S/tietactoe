@@ -1,0 +1,24 @@
+this application is about making a money manager
+to track the history of income and expenses
+and present balance
+
+<br/>
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/money-manager-output.gif" alt="money manager output gif" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
+
+i have done till the making adding containers showing income expense and balance
+
+Things to do one-by-one , one at a time
+
+- save the money details to array when new details added
+- send array to MoneyManager
+  --- I have the updated array called tranHistory
+  - how to send this array to another component when button is clicked
+    - can send the array to another component
+      i alway do its simple call the function from the props ,
+      - send this new array to that prop
+- array is send for the first time is empty and arry getting updated
+  --- i simple kept transactiondetails outside its working but keeping it outside making run twice one prev one updated making it bad state
+- adding working delete button

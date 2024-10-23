@@ -3,7 +3,8 @@
 // class good 1.projectspage 2. googlesearch 3. contactsapp
 
 import React from "react";
-import Appointments from "./Components/AppoinmentsCp16/Appointments";
+//import Appointments from "./Components/AppoinmentsCp16/Appointments";
+import MoneyManager from "./Components/MoneyManager/MoneyManager";
 
 // import CommentsApp from "./Components/CommentsApp/CommentsApp";
 // import ContactsApp from "./Components/Contacts/ContactsApp";
@@ -28,7 +29,8 @@ import Appointments from "./Components/AppoinmentsCp16/Appointments";
 const App = () => {
   return (
     <div className="container">
-      <Appointments />
+      <MoneyManager />
+      {/* <Appointments /> */}
       {/* <CommentsApp /> */}
       {/* <ContactsApp /> */}
       {/* <Reviews /> */}

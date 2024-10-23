@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch with Speech Transcription</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #stopwatch {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      #transcription {
+        width: 60%;
+        height: 200px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 1.2em;
+        overflow-y: auto;
+      }
+      button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stopwatch">00:00:00</div>
+    <button id="startStopBtn">Start</button>
+    <div id="transcription" contenteditable="true"></div>
+
+    <script>
+      let startTime, updatedTime, difference;
+      let interval;
+      let running = false;
+
+      const stopwatchDisplay = document.getElementById("stopwatch");
+      const startStopBtn = document.getElementById("startStopBtn");
+      const transcriptionDisplay = document.getElementById("transcription");
+
+      startStopBtn.addEventListener("click", () => {
+        if (!running) {
+          startStopwatch();
+          startSpeechRecognition();
+          startStopBtn.textContent = "Stop";
+        } else {
+          stopStopwatch();
+          stopSpeechRecognition();
+          startStopBtn.textContent = "Start";
+        }
+      });
+
+      function startStopwatch() {
+        startTime = new Date().getTime();
+        interval = setInterval(updateStopwatch, 1000);
+        running = true;
+      }
+
+      function updateStopwatch() {
+        updatedTime = new Date().getTime();
+        difference = updatedTime - startTime;
+        const hours = Math.floor(difference / (1000 * 60 * 60));
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        stopwatchDisplay.textContent =
+          (hours < 10 ? "0" + hours : hours) +
+          ":" +
+          (minutes < 10 ? "0" + minutes : minutes) +
+          ":" +
+          (seconds < 10 ? "0" + seconds : seconds);
+      }
+
+      function stopStopwatch() {
+        clearInterval(interval);
+        running = false;
+      }
+
+      // Speech Recognition
+      const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+      let recognition;
+      if (SpeechRecognition) {
+        recognition = new SpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.lang = "en-US";
+
+        recognition.onresult = (event) => {
+          let interimTranscript = "";
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              transcriptionDisplay.textContent +=
+                event.results[i][0].transcript + " ";
+              console.log(event);
+            } else {
+              interimTranscript += event.results[i][0].transcript;
+            }
+          }
+        };
+
+        recognition.onerror = (event) => {
+          console.error("Speech recognition error:", event.error);
+        };
+      }
+
+      function startSpeechRecognition() {
+        if (recognition) {
+          recognition.start();
+        }
+      }
+
+      function stopSpeechRecognition() {
+        if (recognition) {
+          recognition.stop();
+        }
+      }
+    </script>
+  </body>
+</html>
