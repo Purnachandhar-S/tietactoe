@@ -41,7 +41,11 @@
   - if not game over
     - score is showing zero when win or lose card is shown - 8:50
     - fixed by changing - setScore(0) when replay button clicked
-  - ## errors
+
+  ## errors
+
+  - common error but the app is working fine
+  - dont have any major changes from test cases
 
 ## Discussions
 
