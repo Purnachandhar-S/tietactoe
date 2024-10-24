@@ -3,8 +3,9 @@
 // class good 1.projectspage 2. googlesearch 3. contactsapp
 
 import React from "react";
-//import Appointments from "./Components/AppoinmentsCp16/Appointments";
-import MoneyManager from "./Components/MoneyManager/MoneyManager";
+// import Appointments from "./Components/AppoinmentsCp16/Appointments";
+// import MoneyManager from "./Components/MoneyManager/MoneyManager";
+import EmojiGameApp from "./Components/EmojiGameCp18/dummy2";
 
 // import CommentsApp from "./Components/CommentsApp/CommentsApp";
 // import ContactsApp from "./Components/Contacts/ContactsApp";
@@ -29,7 +30,8 @@ import MoneyManager from "./Components/MoneyManager/MoneyManager";
 const App = () => {
   return (
     <div className="container">
-      <MoneyManager />
+      <EmojiGameApp />
+      {/* <MoneyManager /> */}
       {/* <Appointments /> */}
       {/* <CommentsApp /> */}
       {/* <ContactsApp /> */}
